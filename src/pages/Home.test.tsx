@@ -5,21 +5,21 @@ import Home from './Home';
 describe('Home', () => {
   it('renders the About Me section', () => {
     render(<Home />);
-    expect(screen.getByText('About Me')).toBeInTheDocument();
+    expect(screen.getByText('About Me')).toBeTruthy();
   });
 
   it('renders the Work Experience section', () => {
     render(<Home />);
-    expect(screen.getByText('Work Experience')).toBeInTheDocument();
+    expect(screen.getByText('Work Experience')).toBeTruthy();
   });
 
   it('displays about me content', () => {
     render(<Home />);
-    expect(screen.getByText(/I am a passionate professional/i)).toBeInTheDocument();
+    expect(screen.getByText(/I am a passionate professional/i)).toBeTruthy();
   });
 
   it('displays work experience content', () => {
     render(<Home />);
-    expect(screen.getByText(/Throughout my career/i)).toBeInTheDocument();
+    expect(screen.getByText(/Throughout my career/i)).toBeTruthy();
   });
 });

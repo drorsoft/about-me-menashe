@@ -10,7 +10,7 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
-    expect(screen.getByText('John Doe')).toBeInTheDocument();
+    expect(screen.getByText('John Doe')).toBeTruthy();
   });
 
   it('renders navigation links', () => {
@@ -19,9 +19,9 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
-    expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /contact info/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /home/i })).toBeTruthy();
+    expect(screen.getByRole('link', { name: /resume/i })).toBeTruthy();
+    expect(screen.getByRole('link', { name: /contact info/i })).toBeTruthy();
   });
 
   it('navigation links have correct href attributes', () => {
@@ -30,8 +30,8 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
-    expect(screen.getByRole('link', { name: /home/i })).toHaveAttribute('href', '/');
-    expect(screen.getByRole('link', { name: /resume/i })).toHaveAttribute('href', '/resume');
-    expect(screen.getByRole('link', { name: /contact info/i })).toHaveAttribute('href', '/contact-info');
+    expect(screen.getByRole('link', { name: /home/i }).getAttribute('href')).toBe('/');
+    expect(screen.getByRole('link', { name: /resume/i }).getAttribute('href')).toBe('/resume');
+    expect(screen.getByRole('link', { name: /contact info/i }).getAttribute('href')).toBe('/contact-info');
   });
 });
