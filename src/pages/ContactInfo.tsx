@@ -6,6 +6,7 @@ function ContactInfo() {
       <p className="mb-4 text-xl">My experience includes working with cutting-edge technologies and frameworks to deliver high-quality solutions.</p>
       <p className="mb-4 text-xl">I am committed to continuous learning and staying up-to-date with the latest industry trends and best practices.</p>
       <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpZGVybWFufGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Spiderman" className="mx-auto my-4 rounded-lg border-4 border-black" />
+
     </div>
   )
 }
